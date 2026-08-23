@@ -9,6 +9,10 @@ read project data, and generate reports directly.
 **Requires:** Claude Desktop app (not the browser version), and your **TechShop Testing** Jira
 project (created in the setup clip).
 
+> **Works on the free Claude plan.** Connectors are available on Free — free accounts get **one
+> connector**, which is exactly what this course needs (just Atlassian). No paid upgrade
+> required.
+
 ---
 
 ## Step 1 — Have your Jira project ready
