@@ -402,13 +402,31 @@ Title: Fix: [short fix description]
 
 ## CATEGORY 10: Autonomous Exploratory Testing (Section 7)
 
-**Prompt 40 — Antigravity: run a full autonomous exploratory session (Section 7 · Clip 1)**
+**Prompt 40 — Antigravity: set up the Playwright MCP, then run a full autonomous exploratory session (Section 7 · Clip 1)**
+
+> **Note — Playwright MCP is now required.** Antigravity can no longer open a browser on its
+> own; it drives the browser through the **Playwright MCP server**. This prompt sets it up
+> first, then runs the session. **If the Playwright MCP tools don't appear after setup,
+> restart Antigravity so it loads the new server**, then run the exploration step again.
+
 ```
-Run an exploratory testing session on the [App Name] application in [path/to/app].
-Open app in the browser. Explore all user-facing features — [list features].
-Test interactions, check validations, probe edge cases, and surface any bugs,
-missing functionality, or unexpected behaviour you find.
-Report each finding as a short title and one-sentence description.
+First set up the Playwright MCP server so you can drive a real browser, then run an
+exploratory testing session.
+
+SETUP (do this before exploring):
+1. Add the Playwright MCP server to my MCP configuration:
+   "playwright": { "command": "npx", "args": ["@playwright/mcp@latest"] }
+2. Install the Playwright browsers: npx playwright install
+3. Confirm the Playwright MCP tools are now available to you. If they are NOT available,
+   tell me to restart Antigravity so it picks up the newly added Playwright MCP server,
+   and wait until the tools appear before continuing.
+
+EXPLORE (once the Playwright MCP is running):
+4. Using the Playwright MCP, open the [App Name] application at [path/to/app or URL] in the
+   browser. Explore all user-facing features — [list features]. Test interactions, check
+   validations, probe edge cases, and surface any bugs, missing functionality, or unexpected
+   behaviour you find.
+5. Report each finding as a short title and one-sentence description.
 ```
 
 **Prompt 41 — Convert Antigravity session findings to bug reports — Claude (Section 7 · Clip 3)**
