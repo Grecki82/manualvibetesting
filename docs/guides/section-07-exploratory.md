@@ -26,17 +26,32 @@ That's where you'll type the instruction below.
 
 ## Step 2 — Tell it to run an exploratory session (video Clip 1) — paste this
 
+> **One-time setup:** Antigravity now drives the browser through the **Playwright MCP server**,
+> so the prompt below sets that up first, then explores. If the Playwright tools don't appear
+> after setup, **restart Antigravity IDE** so it loads the new server, then run the prompt
+> again.
+
 ```
-Run an exploratory testing session on the TechShop app in the folder techshop/broken-app.
-Open the app in the browser and explore every user-facing feature: login, product catalog,
-shopping cart, and checkout.
-Try normal actions, invalid input, empty fields, and edge cases. Look for bugs, missing
-validation, wrong calculations, and anything that behaves unexpectedly.
-Report each finding as a short title plus a one-sentence description.
+First set up the Playwright MCP so you can drive a real browser, then run an exploratory session.
+
+SETUP:
+1. Add the Playwright MCP server to my MCP config:
+   "playwright": { "command": "npx", "args": ["@playwright/mcp@latest"] }
+2. Install the Playwright browsers: npx playwright install
+3. Confirm the Playwright MCP tools are available. If they are NOT, tell me to restart
+   Antigravity so it loads the new server, and wait until they appear before continuing.
+
+EXPLORE (once the Playwright MCP is running):
+4. Using the Playwright MCP, run an exploratory testing session on the TechShop app in the
+   folder techshop/broken-app. Open the app in the browser and explore every user-facing
+   feature: login, product catalog, shopping cart, and checkout.
+5. Try normal actions, invalid input, empty fields, and edge cases. Look for bugs, missing
+   validation, wrong calculations, and anything that behaves unexpectedly.
+6. Report each finding as a short title plus a one-sentence description.
 ```
 
-Press **Enter**. Antigravity IDE will open the app and click through it on its own. Watch —
-it's testing the app live.
+Press **Enter**. Antigravity IDE first sets up the Playwright MCP, then opens the app in the
+browser and clicks through it on its own. Watch — it's testing the app live.
 
 **✅ Check:** it produces a list of findings, each a short title + one sentence (e.g.
 "Password shown in plain text — the login field does not mask characters").

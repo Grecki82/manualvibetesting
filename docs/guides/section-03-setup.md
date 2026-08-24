@@ -73,12 +73,22 @@ That chat panel is where you'll paste prompts later.
 
 ---
 
-## Step 5 — (Can wait until Section 6) Connect Claude to Jira with MCP
+## Step 5 — Create Jira and connect Claude to it
 
-This lets Claude Desktop create Jira tickets for you automatically. You can do it now or
-when you reach Section 6 — it's not needed before then.
+This lets Claude create Jira tickets and read your project for you. It's quick now — no API
+token, no config file, no terminal:
 
-- Full guide, including the config file to copy and troubleshooting:
+1. **Create the Jira project:** go to **atlassian.com/software/jira** → Get it free → name your
+   site → create a **Scrum** project called **TechShop Testing**, key **TECH**.
+2. **Connect Claude:** in **Claude Desktop → Settings → Connectors**, search for **Atlassian**
+   (the connector is **Atlassian Rovo**), click **Connect**, and authorise your Jira site in
+   the browser window.
+3. **Test it:** open a **new chat** and send `List all projects in my Jira account` — you
+   should get back your **TECH** project.
+
+Works on the free Claude plan (free accounts get one connector — all this course needs).
+
+- Full steps and troubleshooting:
   [`resources/mcp-setup-guide.md`](../../resources/mcp-setup-guide.md).
 
 ---
