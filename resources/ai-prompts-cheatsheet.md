@@ -1,5 +1,5 @@
 # AI Prompts Cheat Sheet for Manual Testers
-> 51 ready-to-use prompts for Vibetesting in 2026
+> 51 ready-to-use prompts for Agent vibe testing 2026
 > Copy, paste, and adapt these for your own projects.
 
 ---

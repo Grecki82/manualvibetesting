@@ -1,5 +1,5 @@
 # GitHub Setup Guide
-## Vibetesting in 2026 — Course Resources
+## Agent vibe testing 2026 — Course Resources
 
 This guide covers how to get the course files onto your machine using GitHub.
 If you just want the files without any GitHub setup, use the ZIP download option in the README.

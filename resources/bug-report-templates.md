@@ -1,5 +1,5 @@
 # Bug Report Templates — TechShop Demo App
-> Course resource for: Vibetesting in 2026 — Manual Testing with AI Tools
+> Course resource for: Agent vibe testing 2026 — Manual Testing with AI Tools
 
 ---
 

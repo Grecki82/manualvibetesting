@@ -1,5 +1,5 @@
 # MCP Setup Guide — Connecting Claude to Jira
-## Vibetesting in 2026 — Course Resources
+## Agent vibe testing 2026 — Course Resources
 
 Connects Claude Desktop to your Jira project using Claude's **built-in Atlassian connector** —
 no API token, no config files, no terminal. You connect once and Claude can create tickets,

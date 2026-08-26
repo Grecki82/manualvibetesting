@@ -1,4 +1,4 @@
-# Vibetesting in 2026 — Course Resources
+# Agent vibe testing 2026 — Course Resources
 
 This repository contains all the files you need to follow along with the course.
 Download or fork it once and everything is in place for every section.
