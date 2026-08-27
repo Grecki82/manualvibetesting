@@ -1,7 +1,7 @@
 # BookNow — Known Bugs (Broken App)
 > Reference document for the Section 12 Capstone Project.
-> All bugs are intentional and present in `demo-apps/booknow-broken/`.
-> The fixed version (`demo-apps/booknow-fixed/`) resolves all of them.
+> All bugs are intentional and present in `capstone/booknow-broken/`.
+> The fixed version (`capstone/booknow-fixed/`) resolves all of them.
 
 ---
 
