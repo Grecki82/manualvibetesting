@@ -241,9 +241,26 @@ function proceedToCheckoutBuggy() {
 function renderCheckoutSummary() {
 }
 
-function buggyPlaceOrder() {
+function buggyPlaceOrder(event) {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  const requiredFields = Array.from(form.querySelectorAll('[required]'));
+  requiredFields.forEach(field => field.setCustomValidity(''));
+
+  const emptyField = requiredFields.find(field => field.value.trim() === '');
+  if (emptyField) {
+    emptyField.setCustomValidity('Please fill out this field.');
+    emptyField.reportValidity();
+    return;
+  }
+
   showPage('confirm');
 }
+
+document.getElementById('checkout-form').addEventListener('input', event => {
+  event.target.setCustomValidity('');
+});
 
 /* ══════════════════════════════════════════
    INIT
